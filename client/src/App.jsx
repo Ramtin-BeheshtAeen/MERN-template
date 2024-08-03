@@ -6,7 +6,8 @@ function App() {
 
   return (
     <>
-      <h1>Vite + React</h1>
+      <h1>React Template is Working</h1>
+      <h1>Client side of MERN app is ready</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
