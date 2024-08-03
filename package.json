@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "if-env TYPE=server && (cd server && npm install) || (cd client &&  npm install)",
+    "build-pnpm": "if-env TYPE=server && (cd server && pnpm install) || (cd client &&  pnpm install) ",
+    "server": " node ./server/server.js ",
+    "client": " cd client && npm start "
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Ramtin-BeheshtAeen/react_template/issues"
   },
-  "homepage": "https://github.com/Ramtin-BeheshtAeen/react_template#readme"
+  "homepage": "https://github.com/Ramtin-BeheshtAeen/react_template#readme",
+  "dependencies": {
+    "if-env": "^1.0.4"
+  }
 }
