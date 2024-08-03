@@ -3,7 +3,18 @@
 This repository contains a comprehensive template for building applications using the MERN stack (MongoDB, Express.js, React, Node.js). It includes a well-structured project setup, essential configurations, and best practices to kickstart your development process. Perfect for developers looking to streamline their workflow and ensure consistency across projects.
 
 # Build
-scripts Json file:
+## requirements:
+- if-env package
+in root directory run the following command:
+```bash
+npm i if-env
+```
+
+
+
+## explanations:
+
+scripts section of package.json file:
 ```json
   "scripts": {
     "build": "if-env TYPE=server && (cd server && npm install) || (cd client &&  npm install)",
@@ -11,12 +22,6 @@ scripts Json file:
     "server": " node ./server/server.js ",
     "client": " cd client && npm start "
   },
-```
-## requirements:
-- if-env package
-in root directory run the following command:
-```bash
-npm i if-env
 ```
 
 to modify the build command change the `script` section in package.json in root directory. current one will run this command:
@@ -30,5 +35,10 @@ Personally i use `pnpm` for local test enlivenments, so i have added a new comma
 
 # Run Project
 running the serve side:
-
+```json
+"server": " node ./server/server.js ",
+```
 running the client side:
+```json
+"client": " cd client && npm start "
+```

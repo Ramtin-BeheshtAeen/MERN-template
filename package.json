@@ -2,7 +2,6 @@
   "name": "mern_template",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "build": "if-env TYPE=server && (cd server && npm install) || (cd client &&  npm install)",
     "build-pnpm": "if-env TYPE=server && (cd server && pnpm install) || (cd client &&  pnpm install) ",
