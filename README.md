@@ -11,8 +11,7 @@ npm i if-env
 ```
 
 ## explanations:
-
-scripts section of package.json file:
+`scripts` section of `package.json` file:
 ```json
   "scripts": {
     "build": "if-env TYPE=server && (cd server && npm install) || (cd client &&  npm install)",
