@@ -2,13 +2,38 @@
 
 This repository contains a comprehensive template for building applications using the MERN stack (MongoDB, Express.js, React, Node.js). It includes a well-structured project setup, essential configurations, and best practices to kickstart your development process. Perfect for developers looking to streamline their workflow and ensure consistency across projects.
 
-# Build
-## requirements:
+# requirements:
 - if-env package
+
+# Build
+first clone this project to the new projects folder using the following commad:
+```bash
+git clone [address of this project]
+```
+then copy all the files from `MERN_template` folder to the current directory and delete the `MERN_template` folder:
+```bash
+cp -r MERN-template/* .
+```
+if you want to copy it to other location, replace the dot with that specific location.
+and finially delete the `MERN_template` folder
+```bash
+rm rf MERN-template/
+```
+install `if-env package`:
 in root directory run the following command:
 ```bash
 npm i if-env
 ```
+build server and client side(this will install all requierd node modules):
+if you are using pnpm use:
+```bash
+npm run build-pnpm
+```
+otherweise run this comand:
+```bash
+npm run build
+```
+
 
 ## explanations:
 `scripts` section of `package.json` file:
