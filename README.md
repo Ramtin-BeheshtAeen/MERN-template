@@ -10,8 +10,6 @@ in root directory run the following command:
 npm i if-env
 ```
 
-
-
 ## explanations:
 
 scripts section of package.json file:
@@ -20,7 +18,7 @@ scripts section of package.json file:
     "build": "if-env TYPE=server && (cd server && npm install) || (cd client &&  npm install)",
     "build-pnpm": "if-env TYPE=server && (cd server && pnpm install) || (cd client &&  pnpm install) ",
     "server": " node ./server/server.js ",
-    "client": " cd client && npm start "
+    "client": " cd client && npm run dev "
   },
 ```
 
@@ -34,11 +32,25 @@ Personally i use `pnpm` for local test enlivenments, so i have added a new comma
 ```
 
 # Run Project
-running the serve side:
+## running the serve side:
+```bash
+npm run server
+```
+modify this script, for your optimal result:
 ```json
 "server": " node ./server/server.js ",
 ```
-running the client side:
+
+## running the client side:
+```bash
+npm run client
+```
+because Vite template has been used, this script will be used:
+```json
+"client": " cd client && npm run dev "
+```
+
+otherwise, replace it with:
 ```json
 "client": " cd client && npm start "
 ```
